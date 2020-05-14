@@ -107,9 +107,13 @@ public class Reader {
         return buffer[bufferPointer++];
     }
 
-    public void close() throws IOException {
-        if (din == null)
-            return;
-        din.close();
+    public void close() {
+        try {
+            if (din == null)
+                return;
+            din.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
