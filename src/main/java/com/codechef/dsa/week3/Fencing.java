@@ -1,12 +1,10 @@
 package com.codechef.dsa.week3;
 
-import com.codechef.utility.ArrayUtils;
 import com.codechef.utility.Reader;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Objects;
-import java.util.Scanner;
 import java.util.Set;
 
 public class Fencing {
