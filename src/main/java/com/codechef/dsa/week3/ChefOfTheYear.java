@@ -19,7 +19,7 @@ public class ChefOfTheYear {
         Map<String, String> country = new HashMap<>();
 
         for (int i = 0; i < m; i++) {
-            String[] tokens = reader.readLine().trim().split(" ");
+            String[] tokens = reader.nextLine().trim().split(" ");
             country.put(tokens[0], tokens[1]);
         }
 
@@ -27,7 +27,7 @@ public class ChefOfTheYear {
         Map<String, Integer> countryVotes = new HashMap<>();
 
         for (int i = 0; i < n; i++) {
-            String playerName = reader.readLine();
+            String playerName = reader.nextLine();
             playerVotes.put(playerName, playerVotes.getOrDefault(playerName, 0) + 1);
             String playerCountry = country.get(playerName);
             countryVotes.put(playerCountry, countryVotes.getOrDefault(playerCountry, 0) + 1);

@@ -3,12 +3,9 @@ package com.codechef.utility;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Reader {
-    final private int BUFFER_SIZE = 1 << 16;
+    final private int BUFFER_SIZE = 1 << 64;
     private DataInputStream din;
     private byte[] buffer;
     private int bufferPointer, bytesRead;
@@ -25,7 +22,7 @@ public class Reader {
         bufferPointer = bytesRead = 0;
     }
 
-    public String readLine() throws IOException {
+    public String nextLine() throws IOException {
         byte[] buf = new byte[64]; // line length
         int cnt = 0, c;
         while ((c = read()) != -1) {

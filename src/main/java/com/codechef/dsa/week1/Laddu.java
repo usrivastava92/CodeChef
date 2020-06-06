@@ -10,12 +10,12 @@ public class Laddu {
         int testCase = reader.nextInt();
 
         while (testCase-- > 0) {
-            String[] in = reader.readLine().trim().split(" ");
+            String[] in = reader.nextLine().trim().split(" ");
             int activities = Integer.parseInt(in[0]);
             String origin = in[1];
             long ladduz = 0;
             for (int i = 0; i < activities; i++) {
-                String[] inAct = reader.readLine().trim().split(" ");
+                String[] inAct = reader.nextLine().trim().split(" ");
                 String activity = inAct[0];
                 switch (activity) {
                     case "CONTEST_WON": {
